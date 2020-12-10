@@ -4,6 +4,10 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 from stdimage.models import StdImageField
 
+def get_file_path(_instance, filename):
+    ext = filename.split('.')[-1]
+    filename = f'{uuid.uuid4()}.{ext}'
+    return filename
 
 class Base(models.Model):
   crate = models.DateField('crate', auto_now_add=True)
@@ -11,14 +15,17 @@ class Base(models.Model):
   is_active = models.BooleanField('is_active', default=True)
 
   class Meta:
-      abstract = True
+    abstract = True
 
 
 class Employee(Base):
   name = models.CharField('Name', max_length=100)
+  last_name = models.CharField('Last Name', max_length=200)
   functions = models.CharField('Functions', max_length=150)
+  phone = models.CharField('Phone', max_length=17)
   about = models.TextField('About', max_length=1000)
-  image = StdImageField('Image', upload_to=str(id), variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
+  email = models.EmailField('E-mail', max_length=100)
+  image = StdImageField('Image', upload_to=get_file_path, variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
   city = models.CharField('City', max_length=100)
   state = models.CharField('State', max_length=100)
 
@@ -34,7 +41,7 @@ class Employee(Base):
     verbose_name_plural = 'Employees'
 
   def __str__(self):
-    return self.nome
+    return self.name
 
 
 class Skill(Base):
@@ -47,7 +54,7 @@ class Skill(Base):
     verbose_name_plural = 'Skills'
 
   def __str__(self):
-    return self.nome
+    return self.name
 
 
 class Education(Base):
@@ -59,10 +66,10 @@ class Education(Base):
 
   class Meta:
     verbose_name = 'Education'
-    verbose_name_plural = ''
+    verbose_name_plural = 'Educations'
 
   def __str__(self):
-      return self.nome
+      return self.institution
 
 
 class ExtraEducation(Base):
@@ -71,7 +78,7 @@ class ExtraEducation(Base):
 
   class Meta:
     verbose_name = 'Extra Education'
-    verbose_name_plural = ''
+    verbose_name_plural = 'Extra Educations'
 
   def __str__(self):
-      return self.nome
+      return self.name
