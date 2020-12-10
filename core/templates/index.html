@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="h-100">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f6213ee45f.js" crossorigin="anonymous"></script>
+    <title>Curriculum Vitae - Adriano M. Martins</title>
+
+    <style>
+      body {
+        background-color: #242424;
+        color: white;
+        font-family: Helvetica;
+      }
+
+      hr {
+        background-color: white;
+      }
+
+      .info {
+        font-weight: bold;
+        color: gray;
+      }
+
+      .photo {
+        width: 150px;
+        height: 150px;
+      }
+
+      .gray-1 {
+        background-color: #222222;
+      }
+
+      .gray-2 {
+        background-color: #242424;
+      }
+
+      .gray-3 {
+        background-color: #272727;
+      }
+
+      .gray-4 {
+        background-color: #303030;
+      }
+
+      img {
+        display: relative;
+        top: 100%;
+      }
+
+      .font-1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+
+      .font-2 {
+        font-family: 'Courier New', Courier;
+      }
+
+      .font-2:after {
+        content: '|';
+        margin-left: 5px;
+        opacity: 1;
+        animation: pisca .7s infinite;
+      }
+
+      /* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+      @keyframes pisca {
+
+        0%,
+        100% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .text-purple {
+        color: rgb(161, 23, 161);
+      }
+
+
+      @media screen and (max-width: 600px) {
+        .div-photo {
+          background-color: #242424;
+        }
+
+        .text-small {
+          font-size: 50%;
+        }
+
+        .text-medium {
+          font-size: 80%;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body class="h-100" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+      <a class="navbar-brand" href="#">HOME</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bio">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Escolaridade</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#extraEducation">Extracurricular</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#social">Redes Sociais</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header id="home" class="h-100 overflow-hidden">
+      <div class="w-100 h-100 text-center text-md-left">
+        <div class="d-flex  flex-column text-center pt-5 h-75" style="background-image: url(https://media.giphy.com/media/xTiTniuHdUjpOlNo1q/giphy.gif); background-size: cover; background-repeat: no-repeat;">
+          <div class="pt-5">
+            <img src="img.jpg" alt="Nome Sobrenome" class=" photo rounded-circle">
+          </div>
+          <div>
+            <h1> <span class="display-4 text-medium"> ADRIANO <br> <span class="text-primary font-1"> MARQUES MARTINS </span></span> </h1>
+          </div>
+          <div>
+            <h2><span class="font-2 h1 text-secondary text-small">backend developer e data science</span></h2>
+          </div>
+          <div>
+            <hr>
+          </div>
+        </div>
+        <div class="d-flex align-items-end flex-wrap p-md-5 h-25">
+          <div class="flex-fill">
+            <span class="mb-2 d-block info">Localização</span>
+            <span>Betim, MG</span>
+          </div>
+          <div class="flex-fill">
+            <span class="mb-2 d-block info">Telefone</span>
+            <span>(99) 99999-9999</span>
+          </div>
+          <div class="flex-fill">
+            <span class="mb-2 d-block info">E-mail</span>
+            <span>adriano.mqsmts@gmail.com</span>
+          </div>
+          <div class="flex-fill">
+            <span class="mb-2 d-block info">Resdes Sociais</span>
+            <a href="#"><i class="text-primary fa fa-twitter-square h3" aria-hidden="true"></i></a>
+            <a href="#"><i class="text-primary fa fa-github-square h3" aria-hidden="true"></i></a>
+            <a href="#"><i class="text-primary fa fa-facebook-square h3" aria-hidden="true"></i></a>
+            <a href="#"><i class="text-primary fa fa-instagram h3" aria-hidden="true"></i></a>
+            <a href="#"><i class="text-primary fa fa-linkedin-square h3" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Endheader -->
+    <!--Bio-->
+    <section id="bio" class=" overflow-hidden">
+      <div class="row">
+        <!--Left-->
+        <div class="col-md-4 pt-md-5 pb-md-5 gray-3 text-center d-flex align-content-start justify-content-md-end justify-content-center flex-wrap">
+          <div class=" pt-4 pb-4">
+            <h3 class="text-primary">Sobre</h3>
+            <p class="lead text-secondary">Um pouco sobre mim</p>
+          </div>
+        </div>
+        <!--endLeft-->
+        <!--Right-->
+        <div class="col-md-8 p-5 gray-4 d-flex align-content-md-center flex-wrap text-wrap text-justify">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consequuntur sequi ipsa, odit libero enim amet consequatur vitae, in temporibus exercitationem at aperiam non nulla, consectetur quo incidunt! Debitis, cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illum accusantium voluptatem officia laudantium repellendus quaerat, a architecto iste exercitationem ipsa perferendis vitae nostrum, numquam ea voluptatibus, velit quo porro.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum optio nam est provident, ab eum nemo omnis quisquam libero corrupti sit praesentium eius suscipit quos iusto delectus eaque minus vel?</p>
+          <!--Endright-->
+        </div>
+    </section>
+    <!--Endbio-->
+    <!--Skills-->
+    <section id="skills" class="overflow-hidden">
+      <div class="row ">
+        <!--Left-->
+        <div class="col-md-4 pt-5 pb-5 gray-1 d-flex text-center align-content-start justify-content-md-end justify-content-center flex-wrap">
+          <div class="pt-2 pb-2">
+            <h3 class="text-primary">Skills</h3>
+            <p class="lead text-secondary">Princiais Frameworks e Linguagens</p>
+          </div>
+        </div>
+        <!--endLeft-->
+        <!--Right-->
+        <div class="col-md-8 gray-2 p-5 pb-0 d-flex align-content-md-center flex-wrap text-wrap">
+          <div class="row w-100">
+            <div class="col-md-6">
+              <h4 class="text-primary">FREAMEWORK</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+              <div class="progress mb-5">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-primary">FREAMEWORK</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+              <div class="progress mb-5">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-primary">FREAMEWORK</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+              <div class="progress mb-5">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-primary">FREAMEWORK</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+              <div class="progress mb-5">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-primary">FREAMEWORK</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+              <div class="progress mb-5">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-primary">FREAMEWORK</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Description</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Endright-->
+      </div>
+    </section>
+    <!--Endskill-->
+    <!-- Education -->
+    <!--Bio-->
+    <section id="education" class="overflow-hidden">
+      <div class="row">
+        <!--Left-->
+        <div class="col-md-4 p-5 gray-3 text-center d-flex align-content-start justify-content-md-end justify-content-center flex-wrap">
+          <div class=" p-2">
+            <h3 class="text-primary">Education</h3>
+            <p class="lead text-secondary">Formações Escolares</p>
+          </div>
+        </div>
+        <!--endLeft-->
+        <!--Right-->
+        <div class="col-md-8 p-5 gray-4 d-flex align-content-md-center flex-wrap text-wrap">
+          <div class="timeline">
+            <i class="fas fa-circle text-primary pb-4" style="padding-left: 2.7rem; font-size: 0.75rem;"></i><span class="pl-4 text-secondary">1209-1209, Florestal-MG</span>
+            <div class="pl-5 ml-5 mb-0" style="border-left: 2px solid">
+              <h4>Iniciação Científica</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui molestiae inventore tenetur excepturi, asperiores repudiandae, id magnam impedit iste, dolore corporis. Reiciendis commodi iste quae sapiente a totam perspiciatis!</p>
+            </div>
+            <i class="fas fa-circle text-primary pb-4" style="padding-left: 2.7rem; font-size: 0.75rem;"></i><span class="pl-4 text-secondary">1209-1209, Florestal-MG</span>
+            <div class="pl-5 ml-5 mb-0" style="border-left: 2px solid">
+              <h4>UFV</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui molestiae inventore tenetur excepturi, asperiores repudiandae, id magnam impedit iste, dolore corporis. Reiciendis commodi iste quae sapiente a totam perspiciatis!</p>
+            </div>
+            <i class="fas fa-circle text-primary pb-4" style="padding-left: 2.7rem; font-size: 0.75rem;"></i><span class="pl-4 text-secondary">1209-1209, Florestal-MG</span>
+            <div class="pl-5 ml-5 mb-0" style="border-left: 2px solid">
+              <h4>SENAI</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui molestiae inventore tenetur excepturi, asperiores repudiandae, id magnam impedit iste, dolore corporis. Reiciendis commodi iste quae sapiente a totam perspiciatis!</p>
+            </div>
+            <i class="fas fa-circle text-primary pb-4" style="padding-left: 2.7rem; font-size: 0.75rem;"></i><span class="pl-4 text-secondary">1209-1209, Florestal-MG</span>
+            <div class="pl-5 ml-5 mb-0" style="border-left: 2px solid">
+              <h4>SENAI</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui molestiae inventore tenetur excepturi, asperiores repudiandae, id magnam impedit iste, dolore corporis. Reiciendis commodi iste quae sapiente a totam perspiciatis!</p>
+            </div>
+            <i class="fas fa-circle text-primary pb-4" style="padding-left: 2.7rem; font-size: 0.75rem;"></i><span class="pl-4 text-secondary">1209-1209, Florestal-MG</span>
+            <div class="pl-5 ml-5 mb-0" style="border-left: 2px solid">
+              <h4>Ensino Médio</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui molestiae inventore tenetur excepturi, asperiores repudiandae, id magnam impedit iste, dolore corporis. Reiciendis commodi iste quae sapiente a totam perspiciatis!</p>
+            </div>
+            <i class="fas fa-circle text-primary pb-4" style="padding-left: 2.7rem; font-size: 0.75rem;"></i><span class="pl-4 text-secondary">1209-1209, Florestal-MG</span>
+            <div class="pl-5 ml-5 mb-0" style="border-left: 2px solid">
+              <h4>SENAI</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum qui molestiae inventore tenetur excepturi, asperiores repudiandae, id magnam impedit iste, dolore corporis. Reiciendis commodi iste quae sapiente a totam perspiciatis!</p>
+            </div>
+          </div>
+        </div>
+        <!--Endright-->
+      </div>
+    </section>
+    <!-- Endeducation -->
+    <!-- Others -->
+    <section id="extraEducation" class="overflow-hidden">
+      <div class="row ">
+        <!--Left-->
+        <div class="col-md-4 pt-md-5 pb-md-5 gray-2 text-center d-flex align-content-start justify-content-md-end justify-content-center flex-wrap">
+          <div class=" pt-4 pb-4">
+            <h3 class="text-primary">Extra Education</h3>
+            <p class="lead text-secondary">Atividades escolares extracurriculares</p>
+          </div>
+        </div>
+        <!--endLeft-->
+        <!--Right-->
+        <div class="col-md-8 p-md-5 gray-1 d-flex align-content-md-center flex-wrap text-wrap">
+          <div class="row w-100">
+            <div class="col-md-6">
+              <h4 class="text-primary">Iniciação Científica</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-primary">Artigo Cintífico</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-primary">Mensão Honrosa</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-primary">Maratona Cultural Grupo Fiat</h4>
+              <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+            </div>
+          </div>
+          <!--Endright-->
+        </div>
+    </section>
+    <!--Endothers-->
+    <!-- Social Medias -->
+    <section id="social" class=" overflow-hidden">
+      <div class="row">
+        <!--Left-->
+        <div class="col-md-4 pt-md-5 pb-md-5 gray-3 text-center d-flex align-content-start justify-content-md-end justify-content-center flex-wrap">
+          <div class=" pt-4 pb-4">
+            <h3 class="text-primary">Social Medias</h3>
+            <p class="lead text-secondary">Entre em contato</p>
+          </div>
+        </div>
+        <!--endLeft-->
+        <!--Right-->
+        <div class="col-md-8 p-md-5 gray-4 d-flex align-content-md-center flex-wrap text-wrap">
+          <div class="row">
+            <div class="p-5">
+              <a href="#"><i class="h3 text-primary fa fa-facebook" aria-hidden="true"></i>
+                <h4 class="d-inline pl-3 text-primary">Facebook</h4>
+              </a>
+
+            </div>
+            <div class="p-5">
+              <a href="#"><i class="h3 text-primary fa fa-twitter" aria-hidden="true"></i>
+                <h4 class="d-inline pl-3 text-primary">Twiter</h4>
+              </a>
+            </div>
+            <div class="p-5">
+              <a href="#"><i class="h3 text-primary fa fa-github" aria-hidden="true"></i>
+                <h4 class="d-inline pl-3 text-primary">GitHub</h4>
+              </a>
+            </div>
+            <div class="p-5">
+              <a href="#"><i class="h3 text-primary fa fa-instagram" aria-hidden="true"></i>
+                <h4 class="d-inline pl-3 text-primary">Instragram</h4>
+              </a>
+            </div>
+            <div class="p-5">
+              <a href="#"><i class="h3 text-primary fa fa-linkedin" aria-hidden="true"></i>
+                <h4 class="d-inline pl-3 text-primary">Linkedin</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--Endright-->
+      </div>
+    </section>
+    <!-- Endsocialmedias -->
+    <!-- Footer -->
+    <section id="social" class=" overflow-hidden">
+      <div class="row">
+        <!--Left-->
+        <div class="col-md-4 pt-md-5 pb-md-5 gray-2 text-center d-flex align-content-start justify-content-md-end justify-content-center flex-wrap">
+          <div class=" pt-4 pb-4">
+            <h3 class="text-primary">Contact Form</h3>
+            <p class="lead text-secondary">Envia uma mansagem</p>
+          </div>
+        </div>
+        <!--endLeft-->
+        <!--Right-->
+        <div class="col-md-8 p-md-5 gray-3">
+          <form action="" method="post" class="text-white">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="nome">Nome: </label>
+                <input type="text" class="form-control bg-transparent border-bottom border-top-0 border-left-0 border-right-0 border-primary text-white" name="nome" id="nome" aria-describedby="helpNome" placeholder="Nome" required>
+                <small id="helpNome" class="form-text text-muted">Campo para digitar o seu nome</small>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email">E-mail: </label>
+                <input type="email" class="form-control bg-transparent border-bottom border-top-0 border-left-0 border-right-0 border-primary text-white" name="email" id="email" aria-describedby="emailHelpId" placeholder="Email" required>
+                <small id="emailHelpId" class="form-text text-muted">Campo para figitar o seu email em um formato válido</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto: </label>
+              <input type="text" class="form-control bg-transparent border-bottom border-top-0 border-left-0 border-right-0 border-primary text-white" name="assunto" id="assunto" aria-describedby="helpAssunto" placeholder="Assunto" required>
+              <small id="helpAssunto" class="form-text text-muted">Campo para digitar de forma suscinta o assunto da mensagem</small>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem: </label>
+              <textarea class="form-control bg-transparent border-bottom border-top-0 border-left-0 border-right-0 border-primary text-white" name="mensagem" id="mensagem" rows="6" aria-describedby="helpId" placeholder="Mensagem" style="resize: none;" required></textarea>
+              <small id="helpId" class="form-text text-muted">Campo para digitar toda a mensagem que deseja enviar</small>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <button type="reset" class="btn btn-outline-primary w-100">Limpar</button>
+              </div>
+              <div class="col-md-6">
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--Endright-->
+      </div>
+    </section>
+    <!-- Endfooter -->
+
+    <script>
+      function typeWrite(elemento) {
+        const textoArray = elemento.innerHTML.split('');
+        const tamanho = textoArray.length;
+        elemento.innerHTML = '';
+        textoArray.forEach(function (letra, i) {
+
+          setTimeout(function () {
+            elemento.innerHTML += letra;
+          }, 100 * i)
+
+        });
+      }
+      const titulo = document.querySelector('.font-2');
+      typeWrite(titulo);
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>
