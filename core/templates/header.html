@@ -1,0 +1,47 @@
+{% load static %}
+
+<header id="home" class="h-100 overflow-hidden">
+  <div class="w-100 h-100 text-center text-md-left">
+    <div class="d-flex  flex-column text-center pt-5 h-75" style="background-image: url(https://media.giphy.com/media/xTiTniuHdUjpOlNo1q/giphy.gif); background-size: cover; background-repeat: no-repeat;">
+      <div class="pt-5">
+        <img src="{{ employee.image.thumb.url }}" alt="{{ employee.name }} {{ employee.last_name }}" class=" photo rounded-circle">
+      </div>
+      <div>
+        <h1> <span class="display-4 text-medium text-uppercase"> {{ employee.name }} <br> <span class="text-primary font-1 text-uppercase"> {{ employee.last_name }} </span></span> </h1>
+      </div>
+      <div>
+        <h2><span class="font-2 h1 text-secondary text-small text-uppercase"> {{ employee.functions }} </span></h2>
+      </div>
+      <div>
+        <hr>
+      </div>
+    </div>
+    <div class="d-flex align-items-end flex-wrap p-md-5 h-25">
+      <div class="flex-fill">
+        <span class="mb-2 d-block info text-uppercase">Localização <i class="fa fa-map-marker" aria-hidden="true"></i> </span>
+        <span>{{ employee.city }}, {{ employee.state }}</span>
+      </div>
+      <div class="flex-fill">
+        <span class="mb-2 d-block info text-uppercase">Telefone <i class="fa fa-phone" aria-hidden="true"></i> </span>
+        <span>{{ employee.phone }}</span>
+      </div>
+      <div class="flex-fill">
+        <span class="mb-2 d-block info text-uppercase">E-mail <i class="fas fa-mail-bulk    "></i> </span>
+        <span>adriano.mqsmts@gmail.com</span>
+      </div>
+      <div class="flex-fill">
+        <span class="mb-2 d-block info text-uppercase">Redes Sociais</span>
+        <a href="#"><i class="text-primary fa fa-twitter-square h3" aria-hidden="true"></i></a>
+        <a href="#"><i class="text-primary fa fa-github-square h3" aria-hidden="true"></i></a>
+        <a href="#"><i class="text-primary fa fa-facebook-square h3" aria-hidden="true"></i></a>
+        <a href="#"><i class="text-primary fa fa-instagram h3" aria-hidden="true"></i></a>
+        <a href="#"><i class="text-primary fa fa-linkedin-square h3" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+<script>
+  const titulo = document.querySelector('.font-2');
+  typeWrite(titulo);
+</script>

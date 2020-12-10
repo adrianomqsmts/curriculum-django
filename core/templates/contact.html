@@ -1,0 +1,51 @@
+{% load static %}
+
+<section id="social" class=" overflow-hidden">
+  <div class="row">
+    <!--Left-->
+    <div class="col-md-4 pt-md-5 pb-md-5 gray-2 text-center d-flex align-content-start justify-content-md-end justify-content-center flex-wrap">
+      <div class=" pt-4 pb-4">
+        <h3 class="text-primary">Contact Form</h3>
+        <p class="lead text-secondary">Envia uma mansagem</p>
+      </div>
+    </div>
+    <!--endLeft-->
+    <!--Right-->
+    <div class="col-md-8 p-md-5 gray-3">
+      <form action="" method="post" class="text-white" autocomplete="off" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="nome">Nome: </label>
+            <input type="text" class="form-control bg-transparent border-bottom border-top-0 border-left-0 border-right-0 border-primary text-white" name="nome" id="nome" aria-describedby="helpNome" placeholder="Nome" required>
+            <small id="helpNome" class="form-text text-muted">Campo para digitar o seu nome</small>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">E-mail: </label>
+            <input type="email" class="form-control bg-transparent border-bottom border-top-0 border-left-0 border-right-0 border-primary text-white" name="email" id="email" aria-describedby="emailHelpId" placeholder="Email" required>
+            <small id="emailHelpId" class="form-text text-muted">Campo para figitar o seu email em um formato válido</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="assunto">Assunto: </label>
+          <input type="text" class="form-control bg-transparent border-bottom border-top-0 border-left-0 border-right-0 border-primary text-white" name="assunto" id="assunto" aria-describedby="helpAssunto" placeholder="Assunto" required>
+          <small id="helpAssunto" class="form-text text-muted">Campo para digitar de forma suscinta o assunto da mensagem</small>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem: </label>
+          <textarea class="form-control bg-transparent border-bottom border-top-0 border-left-0 border-right-0 border-primary text-white" name="mensagem" id="mensagem" rows="6" aria-describedby="helpId" placeholder="Mensagem" style="resize: none;" required></textarea>
+          <small id="helpId" class="form-text text-muted">Campo para digitar toda a mensagem que deseja enviar</small>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <button type="reset" class="btn btn-outline-primary w-100">Limpar</button>
+          </div>
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--Endright-->
+  </div>
+</section>
