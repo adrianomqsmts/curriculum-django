@@ -11,7 +11,8 @@
     <!--endLeft-->
     <!--Right-->
     <div class="col-md-8 p-5 gray-4 d-flex align-content-md-center flex-wrap text-wrap text-justify">
-      <p>{{ employee.about }}</p>
+      <!--linebreaks permite o texto ser formatado com quebras de linhas ? -->
+      <p>{{ employee.about|linebreaks  }}</p>
       <!--Endright-->
     </div>
 </section>

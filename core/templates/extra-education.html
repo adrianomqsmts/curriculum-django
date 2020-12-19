@@ -12,23 +12,15 @@
     <!--endLeft-->
     <!--Right-->
     <div class="col-md-8 p-md-5 gray-1 d-flex align-content-md-center flex-wrap text-wrap">
-      <div class="row w-100">
-        <div class="col-md-6">
-          <h4 class="text-primary">Iniciação Científica</h4>
-          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
+      <div class="card-columns">
+        {% for extra in extraEducations %}
+        <div class="card bg-transparent">
+          <div class="card-body">
+            <h4 class="text-primary card-header">{{ extra.name }}</h4>
+            <p class="text-justify card-text">{{ extra.description|linebreaks }}</p>
+          </div>
         </div>
-        <div class="col-md-6">
-          <h4 class="text-primary">Artigo Cintífico</h4>
-          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
-        </div>
-        <div class="col-md-6">
-          <h4 class="text-primary">Mensão Honrosa</h4>
-          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
-        </div>
-        <div class="col-md-6">
-          <h4 class="text-primary">Maratona Cultural Grupo Fiat</h4>
-          <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad impedit neque iusto repellendus quos aperiam placeat est, alias reiciendis doloremque sapiente maxime, autem veniam fugit cum ducimus accusamus esse.</p>
-        </div>
+        {% endfor %}
       </div>
       <!--Endright-->
     </div>

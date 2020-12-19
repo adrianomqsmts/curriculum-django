@@ -59,10 +59,12 @@ class Skill(Base):
 
 class Education(Base):
   institution = models.CharField('Institution', max_length=100)
-  start = models.IntegerField('Start', validators=[MaxValueValidator(1000), MinValueValidator(9999)])
-  end = models.IntegerField('End', validators=[MaxValueValidator(1000), MinValueValidator(9999)])
+  start = models.IntegerField('Start', validators=[MaxValueValidator(9999), MinValueValidator(1000)])
+  end = models.IntegerField('End', validators=[MaxValueValidator(9999), MinValueValidator(1000)])
   city = models.CharField('City', max_length=100)
   state = models.CharField('State', max_length=100)
+  description = models.TextField('description', max_length=1000)
+
 
   class Meta:
     verbose_name = 'Education'
@@ -74,7 +76,7 @@ class Education(Base):
 
 class ExtraEducation(Base):
   name = models.CharField('Name', max_length=100)
-  description = models.CharField('Description', max_length=1000)
+  description = models.TextField('description', max_length=1000)
 
   class Meta:
     verbose_name = 'Extra Education'
